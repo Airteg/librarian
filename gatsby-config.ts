@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Librarian`,
-    siteUrl: `https://www.yourdomain.tld`, // Вкажи свій домен
+    siteUrl: `https://www.yourdomain.tld`,
   },
   graphqlTypegen: true,
   plugins: [
@@ -32,11 +32,11 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/content/posts`, // твоя папка з markdown/MDX
+        path: `${__dirname}/src/content/posts`,
       },
       __key: `posts`,
     },
-    `gatsby-transformer-remark`,
+    // `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -46,10 +46,10 @@ const config: GatsbyConfig = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `static/icon.png`, // Помісти іконку 512x512px у /static
+        icon: `static/icon.png`,
       },
     },
-    `gatsby-plugin-offline`, // ВАЖЛИВО: йде після manifest!
+    `gatsby-plugin-offline`,
   ],
 };
 

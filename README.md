@@ -67,3 +67,15 @@ Gatsby-конфіги можуть бути у .ts (gatsby-config.ts), бо Gats
 
 - gatsby-plugin-manifest (src/static/icon.png, 512x512px)
 - gatsby-plugin-offline"
+
+"Для уникнення конфліктів з flowtype/старими eslint-config, рекомендується використовувати тільки сучасний набір eslint-плагінів:
+
+eslint
+eslint-plugin-react
+eslint-plugin-react-hooks"
+
+"В проєкті НЕ використовується Flow та специфічний конфігураційний набір Create React App.
+Лінтинг налаштовано через базові плагіни ESLint для React та JS."
+
+"src/gatsby-types.d.ts — автогенерований файл типів для GraphQL-схеми Gatsby.
+Оновлюється автоматично при кожному запуску develop/build, видаляти або змінювати вручну не потрібно."
