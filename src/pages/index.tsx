@@ -1,27 +1,61 @@
-import React, { useState } from "react";
+import React from "react";
+import styled from "@emotion/styled";
+import { graphql, Link } from "gatsby";
 
-export default function HomePage() {
-  const [files, setFiles] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  const loadFiles = async () => {
-    setLoading(true);
-    const resp = await fetch("/.netlify/functions/list-files");
-    const data = await resp.json();
-    setFiles(data);
-    setLoading(false);
+type Post = {
+  node: {
+    frontmatter: {
+      category: string;
+      title: string;
+      url: string;
+    };
+    id: string;
   };
+};
+type HomePageProps = {
+  data: {
+    allMarkdownRemark: {
+      edges: Post[];
+    };
+  };
+};
+
+export default function HomePage({ data }: HomePageProps) {
+  const edges = data.allMarkdownRemark.edges;
+  console.log("🚀 ~ HomePage ~ edges:", edges);
 
   return (
-    <div>
-      <button onClick={loadFiles}>
-        {loading ? "Завантаження..." : "Показати список файлів"}
-      </button>
-      <ul>
-        {files.map((f) => (
-          <li key={f}>{f}</li>
-        ))}
-      </ul>
-    </div>
+    <Container>
+      {edges.map((post: Post) => {
+        const { category, title, url } = post.node.frontmatter;
+        return (
+          <Link to={`/${category}/${url}`} key={post.node.id}>
+            {title}
+          </Link>
+        );
+      })}
+    </Container>
   );
 }
+export const query = graphql`
+  query MainPageQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            category
+            title
+            url
+          }
+          id
+        }
+      }
+    }
+  }
+`;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+`;
