@@ -12,6 +12,7 @@ const config: GatsbyConfig = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -36,7 +37,6 @@ const config: GatsbyConfig = {
       },
       __key: `posts`,
     },
-    // `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

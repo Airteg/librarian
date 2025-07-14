@@ -79,3 +79,8 @@ eslint-plugin-react-hooks"
 
 "src/gatsby-types.d.ts — автогенерований файл типів для GraphQL-схеми Gatsby.
 Оновлюється автоматично при кожному запуску develop/build, видаляти або змінювати вручну не потрібно."
+
+"Для роботи з Gatsby 5.x рекомендується використовувати ESLint 7.1.0, CommonJS-конфіги (require), і не вказувати "type": "module" у package.json.
+Peer warning-и можна ігнорувати, якщо білд і lint проходять."
+
+“У dev режимі всі фічі працюють тільки через Netlify Dev: http://localhost:8888”

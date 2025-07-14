@@ -3,8 +3,11 @@ onlyBuiltDependencies:
   - core-js
   - core-js-pure
   - es5-ext
+  - esbuild
   - gatsby
   - gatsby-cli
   - lmdb
   - msgpackr-extract
+  - netlify-cli
   - sharp
+  - unix-dgram
