@@ -2,6 +2,7 @@
 title: Римська піца
 category: italy
 url: rome-pizza
+image: ../../images/roman_pizza.png
 ---
 
 # Римська піца

@@ -2,6 +2,7 @@
 title: Подорож до Риму
 category: italy
 url: italy-trip
+image: ../../images/rome_1.png
 ---
 
 # Поїздка до Риму

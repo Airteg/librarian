@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { graphql, Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 type Post = {
   node: {
@@ -8,10 +9,17 @@ type Post = {
       category: string;
       title: string;
       url: string;
+      image?: {
+        childImageSharp?: {
+          gatsbyImageData: any;
+          id: string;
+        };
+      };
     };
     id: string;
   };
 };
+
 type HomePageProps = {
   data: {
     allMarkdownRemark: {
@@ -27,11 +35,14 @@ export default function HomePage({ data }: HomePageProps) {
   return (
     <Container>
       {edges.map((post: Post) => {
-        const { category, title, url } = post.node.frontmatter;
+        const { category, title, url, image } = post.node.frontmatter;
+        const img = image?.childImageSharp?.gatsbyImageData;
+
         return (
-          <Link to={`/${category}/${url}`} key={post.node.id}>
-            {title}
-          </Link>
+          <PostContainer key={post.node.id}>
+            <GatsbyImage image={img} alt={title} />
+            <Link to={`/${category}/${url}`}>{title}</Link>
+          </PostContainer>
         );
       })}
     </Container>
@@ -42,12 +53,22 @@ export const query = graphql`
     allMarkdownRemark {
       edges {
         node {
+          html
           frontmatter {
             category
             title
             url
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 200
+                  formats: [AUTO, WEBP, AVIF]
+                  placeholder: BLURRED
+                )
+                id
+              }
+            }
           }
-          id
         }
       }
     }
@@ -55,7 +76,13 @@ export const query = graphql`
 `;
 const Container = styled.div`
   display: flex;
+
+  align-items: flex-end;
+  justify-content: space-around;
+`;
+const PostContainer = styled.div`
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  margin: 10px 20px;
+  text-align: center;
 `;

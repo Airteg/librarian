@@ -2,6 +2,7 @@
 title: Подорож до Афін
 category: greece
 url: greece-trip
+image: ../../images/attica_athens.png
 ---
 
 # Подорож до Афін
