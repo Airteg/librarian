@@ -10,10 +10,22 @@ const config: GatsbyConfig = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
+    // `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
-
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 600,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,6 +41,13 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/pages/`,
       },
       __key: `pages`,
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,

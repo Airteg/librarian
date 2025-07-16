@@ -35,6 +35,9 @@ importers:
       gatsby-plugin-sitemap:
         specifier: ^6.14.0
         version: 6.14.0(gatsby@5.14.5(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.8.3))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      gatsby-remark-images:
+        specifier: ^7.14.0
+        version: 7.14.0(gatsby-plugin-sharp@5.14.0(gatsby@5.14.5(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.8.3))(graphql@16.11.0))(gatsby@5.14.5(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.8.3))
       gatsby-source-filesystem:
         specifier: ^5.14.0
         version: 5.14.0(gatsby@5.14.5(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.8.3))
@@ -3341,6 +3344,13 @@ packages:
       '@gatsbyjs/reach-router': ^2.0.0
       react: ^18.0.0 || ^0.0.0
       react-dom: ^18.0.0 || ^0.0.0
+
+  gatsby-remark-images@7.14.0:
+    resolution: {integrity: sha512-P1FTQ5DEARWLh3AXXdGSjwAlA/mWWF7M5J/9szdTO6EmmF0+AnfvkIXAtNMtqGqXmbeSgriKvoXeIiyvIYeuRA==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      gatsby: ^5.0.0-next
+      gatsby-plugin-sharp: ^5.0.0-next
 
   gatsby-script@2.14.0:
     resolution: {integrity: sha512-A3IV2cXUrXrzW39kTYJMjbvUlHRjoaZVwH0zsfPINldXw9PenIlr5uBOMWx3IWUlKIghN1rBG+sRIyNczPtxyw==}
@@ -8903,7 +8913,7 @@ snapshots:
   camel-case@4.1.2:
     dependencies:
       pascal-case: 3.1.2
-      tslib: 2.4.1
+      tslib: 2.8.1
 
   camelcase@5.3.1: {}
 
@@ -8921,7 +8931,7 @@ snapshots:
   capital-case@1.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.8.1
       upper-case-first: 2.0.2
 
   ccount@1.1.0: {}
@@ -9143,7 +9153,7 @@ snapshots:
   constant-case@3.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.8.1
       upper-case: 2.0.2
 
   content-disposition@0.5.4:
@@ -9509,7 +9519,7 @@ snapshots:
   dot-case@3.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.8.1
 
   dot-prop@5.3.0:
     dependencies:
@@ -10532,6 +10542,21 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
+  gatsby-remark-images@7.14.0(gatsby-plugin-sharp@5.14.0(gatsby@5.14.5(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.8.3))(graphql@16.11.0))(gatsby@5.14.5(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.8.3)):
+    dependencies:
+      '@babel/runtime': 7.27.6
+      chalk: 4.1.2
+      cheerio: 1.0.0-rc.12
+      gatsby: 5.14.5(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.8.3)
+      gatsby-core-utils: 4.14.0
+      gatsby-plugin-sharp: 5.14.0(gatsby@5.14.5(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.8.3))(graphql@16.11.0)
+      is-relative-url: 3.0.0
+      lodash: 4.17.21
+      mdast-util-definitions: 4.0.0
+      query-string: 6.14.1
+      unist-util-select: 3.0.4
+      unist-util-visit-parents: 3.1.1
+
   gatsby-script@2.14.0(@gatsbyjs/reach-router@2.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@gatsbyjs/reach-router': 2.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -11067,7 +11092,7 @@ snapshots:
   header-case@2.0.4:
     dependencies:
       capital-case: 1.0.4
-      tslib: 2.4.1
+      tslib: 2.8.1
 
   hoist-non-react-statics@3.3.2:
     dependencies:
@@ -11966,7 +11991,7 @@ snapshots:
   no-case@3.0.4:
     dependencies:
       lower-case: 2.0.2
-      tslib: 2.4.1
+      tslib: 2.8.1
 
   node-abi@3.75.0:
     dependencies:
@@ -12166,7 +12191,7 @@ snapshots:
   param-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.8.1
 
   parent-module@1.0.1:
     dependencies:
@@ -12225,7 +12250,7 @@ snapshots:
   pascal-case@3.1.2:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.8.1
 
   password-prompt@1.1.3:
     dependencies:
@@ -12235,7 +12260,7 @@ snapshots:
   path-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.8.1
 
   path-exists@3.0.0: {}
 
@@ -12972,7 +12997,7 @@ snapshots:
   sentence-case@3.0.4:
     dependencies:
       no-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.8.1
       upper-case-first: 2.0.2
 
   serialize-javascript@5.0.1:
@@ -13115,7 +13140,7 @@ snapshots:
   snake-case@3.0.4:
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.4.1
+      tslib: 2.8.1
 
   socket.io-adapter@2.5.5:
     dependencies:
