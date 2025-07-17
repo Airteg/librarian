@@ -14,7 +14,7 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `);
-  console.log("🚀 ~ exports.createPages= ~ data:", data);
+  // console.log("🚀 ~ exports.createPages= ~ data:", data);
   data.allMarkdownRemark.edges.forEach(({ node }) => {
     const { category, url } = node.frontmatter;
     actions.createPage({
