@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import styled from "@emotion/styled";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import type { IGatsbyImageData } from "gatsby-plugin-image";
 
@@ -21,6 +22,7 @@ type SinglePostData = {
 };
 type Props = { data: SinglePostData };
 const SinglePost = ({ data }: Props) => {
+  // console.log("🚀 ~ SinglePost ~ data:", data);
   const { html, frontmatter } = data.markdownRemark;
   const { category, title, url, image } = frontmatter;
   const img = image?.childImageSharp?.gatsbyImageData
@@ -28,11 +30,11 @@ const SinglePost = ({ data }: Props) => {
     : null;
 
   return (
-    <div>
+    <Container>
       <h3>{title}</h3>
       <GatsbyImage image={img!} alt={title} />
       <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    </Container>
   );
 };
 
@@ -55,4 +57,9 @@ export const query = graphql`
       id
     }
   }
+`;
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  border: 5px solid red;
 `;

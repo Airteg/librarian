@@ -42,13 +42,13 @@ const config: GatsbyConfig = {
       },
       __key: `pages`,
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/images/`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -30,7 +30,7 @@ type HomePageProps = {
 
 export default function HomePage({ data }: HomePageProps) {
   const edges = data.allMarkdownRemark.edges;
-  console.log("🚀 ~ HomePage ~ edges:", edges);
+  // console.log("🚀 ~ HomePage ~ edges:", edges);
 
   return (
     <Container>
@@ -76,14 +76,31 @@ export const query = graphql`
   }
 `;
 const Container = styled.div`
-  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(1, 1fr);
 
-  align-items: flex-end;
-  justify-content: space-around;
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (min-width: 1500px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 `;
+
 const PostContainer = styled.div`
+  /* height: 300px; */
+  flex-basis: 20vw;
   display: flex;
   flex-direction: column;
-  margin: 10px 20px;
+  padding: 10px 20px;
   text-align: center;
 `;
