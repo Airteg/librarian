@@ -101,6 +101,7 @@ const PostContainer = styled.div`
   flex-basis: 20vw;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 10px 20px;
   text-align: center;
 `;

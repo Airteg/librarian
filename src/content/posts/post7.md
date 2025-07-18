@@ -1,5 +1,5 @@
 ---
-title: Aptoide
+title: Публікація Android-додатку на Aptoide
 category: publishing-app
 url: publishing-app-Aptoide
 image: ../../images/publishing-app.png

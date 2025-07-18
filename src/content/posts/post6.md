@@ -1,5 +1,5 @@
 ---
-title: Aptoide
+title: Історія Aptoide
 category: mobile-development
 url: aptoide-history
 image: ../../images/AptoideStory1.png

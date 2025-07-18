@@ -17,8 +17,6 @@ export const darkTheme = {
 };
 
 export const globalStyles = (theme: any) => css`
-  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-  @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
   html {
     font-size: clamp(14px, 2vw, 18px); /* адаптивний rem */
     box-sizing: border-box;
