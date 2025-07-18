@@ -1,3 +1,4 @@
+//rafce
 import React from "react";
 import { graphql } from "gatsby";
 import styled from "@emotion/styled";
@@ -26,6 +27,7 @@ type SinglePostData = {
   };
 };
 type Props = { data: SinglePostData };
+
 const SinglePost = ({ data }: Props) => {
   // console.log("🚀 ~ SinglePost ~ data:", data);
   const { html, frontmatter } = data.markdownRemark;
@@ -57,7 +59,7 @@ const SinglePost = ({ data }: Props) => {
 };
 
 export default SinglePost;
-//rafce
+
 export const query = graphql`
   query Post($url: String) {
     markdownRemark(frontmatter: { url: { eq: $url } }) {
