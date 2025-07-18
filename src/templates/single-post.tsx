@@ -86,7 +86,7 @@ export const query = graphql`
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  border: 5px solid red;
+  /* border: 5px solid red; */
 `;
 const Breadcrumbs = styled.nav`
   font-size: 0.95rem;

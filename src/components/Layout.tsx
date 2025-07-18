@@ -37,5 +37,5 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 5px solid blue;
+  /* border: 5px solid blue; */
 `;
